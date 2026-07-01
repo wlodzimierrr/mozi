@@ -45,7 +45,7 @@ export function Hero() {
             The red candle menace.
           </p>
           <p className="mt-6 max-w-xl text-lg font-bold leading-8 text-ink/[0.82] sm:text-xl">
-            Born from blown trades, red candles, cigar smoke, and pure degen
+            Born from blown trades, red candles, blunt smoke, and pure degen
             energy. MOZI is here to turn market pain into memes.
           </p>
 

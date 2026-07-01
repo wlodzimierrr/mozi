@@ -5,11 +5,11 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "MOZI — The Red Candle Menace",
   description:
-    "MOZI is a meme coin born from red candles, degen chaos, cigar smoke, and community memes.",
+    "MOZI is a meme coin born from red candles, degen chaos, blunt smoke, and community memes.",
   openGraph: {
     title: "MOZI — The Red Candle Menace",
     description:
-      "MOZI is a meme coin born from red candles, degen chaos, cigar smoke, and community memes.",
+      "MOZI is a meme coin born from red candles, degen chaos, blunt smoke, and community memes.",
     images: [
       {
         url: "/mozi-hero.jpeg",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "MOZI — The Red Candle Menace",
     description:
-      "MOZI is a meme coin born from red candles, degen chaos, cigar smoke, and community memes.",
+      "MOZI is a meme coin born from red candles, degen chaos, blunt smoke, and community memes.",
     images: ["/mozi-hero.jpeg"],
   },
 };
