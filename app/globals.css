@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --font-body: Inter, ui-sans-serif, system-ui, sans-serif;
+  --font-display: Impact, Haettenschweiler, "Arial Black", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 10% 10%, rgba(255, 204, 77, 0.28), transparent 24rem),
+    radial-gradient(circle at 80% 18%, rgba(215, 25, 25, 0.13), transparent 22rem),
+    #f8e8cf;
+}
+
+body::before {
+  background-image:
+    linear-gradient(rgba(23, 16, 13, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(23, 16, 13, 0.025) 1px, transparent 1px);
+  background-size: 34px 34px, 34px 34px;
+  content: "";
+  inset: 0;
+  pointer-events: none;
+  position: fixed;
+  z-index: 0;
+}
+
+::selection {
+  background: #d71919;
+  color: #fff7ea;
+}
+
+@layer components {
+  .section-shell {
+    @apply relative z-10 mx-auto w-full max-w-7xl px-5 py-20 sm:px-8 lg:px-10;
+  }
+
+  .comic-border {
+    border: 3px solid #17100d;
+    box-shadow: 6px 6px 0 #17100d;
+  }
+
+  .rough-panel {
+    background:
+      linear-gradient(135deg, rgba(255, 255, 255, 0.52), rgba(255, 248, 235, 0.28)),
+      #fff2da;
+    border: 3px solid #17100d;
+    border-radius: 8px;
+    box-shadow: 6px 6px 0 #17100d;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-md border-2 border-ink bg-candle px-5 py-3 font-black uppercase text-white shadow-comic transition duration-200 hover:-translate-y-1 hover:shadow-red active:translate-y-0;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-md border-2 border-ink bg-white/80 px-5 py-3 font-black uppercase text-ink shadow-comic transition duration-200 hover:-translate-y-1 hover:bg-ember active:translate-y-0;
+  }
+
+  .kicker {
+    @apply mb-3 inline-flex rounded-full border-2 border-ink bg-ember px-4 py-1 text-sm font-black uppercase tracking-wide shadow-[3px_3px_0_#17100d];
+  }
+}
+
+.paper-noise {
+  background-image:
+    radial-gradient(rgba(23, 16, 13, 0.09) 0.7px, transparent 0.8px),
+    radial-gradient(rgba(77, 8, 6, 0.055) 0.7px, transparent 0.8px);
+  background-position: 0 0, 11px 13px;
+  background-size: 22px 22px;
+}
+
+.chart-line {
+  clip-path: polygon(0 62%, 9% 46%, 17% 57%, 26% 20%, 36% 50%, 47% 34%, 57% 72%, 66% 45%, 74% 61%, 86% 24%, 100% 40%, 100% 50%, 86% 34%, 74% 71%, 66% 55%, 57% 82%, 47% 44%, 36% 60%, 26% 30%, 17% 67%, 9% 56%, 0 72%);
+}
+
+.smoke-puff {
+  animation: smoke 5.6s ease-in-out infinite;
+}
+
+.smoke-puff:nth-child(2) {
+  animation-delay: 1.2s;
+}
+
+.smoke-puff:nth-child(3) {
+  animation-delay: 2.4s;
+}
+
+.candle-float {
+  animation: candleFloat 7s ease-in-out infinite;
+}
+
+.wiggle-chart {
+  animation: wiggleChart 2.7s ease-in-out infinite;
+  transform-origin: center;
+}
+
+@keyframes smoke {
+  0% {
+    opacity: 0;
+    transform: translateY(24px) scale(0.7);
+  }
+  35% {
+    opacity: 0.45;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-72px) scale(1.55);
+  }
+}
+
+@keyframes candleFloat {
+  0%, 100% {
+    transform: translateY(0) rotate(-2deg);
+  }
+  50% {
+    transform: translateY(-14px) rotate(3deg);
+  }
+}
+
+@keyframes wiggleChart {
+  0%, 100% {
+    transform: rotate(-1deg) translateX(0);
+  }
+  50% {
+    transform: rotate(1deg) translateX(8px);
+  }
+}
